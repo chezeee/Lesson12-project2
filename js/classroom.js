@@ -1,29 +1,29 @@
 /** @param {number[]} grades */
 export function getNumberOfGrades(grades) {
-  // your code
+  return grades.length;
 }
 
 /** @param {number[]} grades */
 export function getSumGrades(grades) {
-  // your code
+  return grades.reduce((total, current) => (total += current));
 }
 
 /** @param {number[]} grades */
 export function getAverageValue(grades) {
-  // your code
+  return getSumGrades(grades) / getNumberOfGrades(grades);
 }
 
 /** @param {number[]} grades */
 export function getPassingGrades(grades) {
-  // your code
+  return grades.filter((grade) => grade >= 10);
 }
 
 /** @param {number[]} grades */
 export function getFailingGrades(grades) {
-  // your code
+  return grades.filter((grade) => grade <= 9);
 }
 
 /** @param {number[]} grades */
 export function getRaisedGrades(grades) {
-  // your code
+  return grades.map((grade) => ++grade);
 }
