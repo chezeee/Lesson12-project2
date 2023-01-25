@@ -25,5 +25,7 @@ export function getFailingGrades(grades) {
 
 /** @param {number[]} grades */
 export function getRaisedGrades(grades) {
-  return grades.map((grade) => ++grade);
+  return grades.map((grade) => {
+    return grade + 1 > 20 ? 20 : ++grade;
+  });
 }
